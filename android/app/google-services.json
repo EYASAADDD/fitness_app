@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "352029847784",
+    "project_id": "smarthealth-60fc1",
+    "storage_bucket": "smarthealth-60fc1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352029847784:android:5a26ce49aa336cadfed95d",
+        "android_client_info": {
+          "package_name": "com.example.smart_health_food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFvRGXU2cTuipnudmiFi4j3VoYUrKScEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

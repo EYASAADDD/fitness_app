@@ -1,0 +1,154 @@
+{
+  "diseases": {
+    "diabetes": {
+      "name": "Diabète",
+      "description": "Contrôle du sucre et des glucides",
+      "severity": "high",
+      "alerts": [
+        {
+          "nutrient": "sugar",
+          "max_per_100g": 5,
+          "severity": "danger",
+          "message": "Sucre élevé - attention!"
+        },
+        {
+          "nutrient": "total_carbs",
+          "max_per_100g": 30,
+          "severity": "warning",
+          "message": "Glucides élevés"
+        }
+      ],
+      "recommended": [
+        "fiber",
+        "protein",
+        "whole_grains"
+      ],
+      "daily_limits": {
+        "sugar": "25g",
+        "calories": "2000 kcal"
+      }
+    },
+    "hypertension": {
+      "name": "Hypertension",
+      "description": "Tension artérielle élevée",
+      "severity": "high",
+      "alerts": [
+        {
+          "nutrient": "sodium",
+          "max_per_100g": 400,
+          "severity": "danger",
+          "message": "Sodium très élevé - éviter!"
+        },
+        {
+          "nutrient": "saturated_fat",
+          "max_per_100g": 5,
+          "severity": "warning",
+          "message": "Gras saturés élevés"
+        }
+      ],
+      "recommended": [
+        "potassium",
+        "magnesium",
+        "fiber"
+      ],
+      "daily_limits": {
+        "sodium": "2300mg",
+        "calories": "2000 kcal"
+      }
+    },
+    "obesity": {
+      "name": "Obésité",
+      "description": "Gestion du poids",
+      "severity": "medium",
+      "alerts": [
+        {
+          "nutrient": "calories",
+          "max_per_100g": 200,
+          "severity": "warning",
+          "message": "Calories élevées"
+        },
+        {
+          "nutrient": "fat",
+          "max_per_100g": 10,
+          "severity": "warning",
+          "message": "Gras élevé"
+        }
+      ],
+      "recommended": [
+        "fiber",
+        "protein",
+        "water"
+      ],
+      "daily_limits": {
+        "calories": "1500 kcal",
+        "fat": "50g"
+      }
+    },
+    "cholesterol": {
+      "name": "Cholestérol élevé",
+      "description": "Réduire le cholestérol",
+      "severity": "medium",
+      "alerts": [
+        {
+          "nutrient": "saturated_fat",
+          "max_per_100g": 5,
+          "severity": "danger",
+          "message": "Gras saturés élevés"
+        },
+        {
+          "nutrient": "cholesterol",
+          "max_per_100g": 50,
+          "severity": "warning",
+          "message": "Cholestérol élevé"
+        }
+      ],
+      "recommended": [
+        "fiber",
+        "omega3",
+        "whole_grains"
+      ],
+      "daily_limits": {
+        "saturated_fat": "20g",
+        "cholesterol": "200mg"
+      }
+    }
+  },
+  "nutrient_thresholds": {
+    "sugar": {
+      "unit": "g/100g",
+      "low": 2,
+      "medium": 10,
+      "high": 20
+    },
+    "sodium": {
+      "unit": "mg/100g",
+      "low": 100,
+      "medium": 400,
+      "high": 800
+    },
+    "saturated_fat": {
+      "unit": "g/100g",
+      "low": 2,
+      "medium": 5,
+      "high": 10
+    },
+    "calories": {
+      "unit": "kcal/100g",
+      "low": 100,
+      "medium": 200,
+      "high": 300
+    },
+    "fiber": {
+      "unit": "g/100g",
+      "low": 1,
+      "medium": 3,
+      "high": 6
+    },
+    "protein": {
+      "unit": "g/100g",
+      "low": 5,
+      "medium": 15,
+      "high": 25
+    }
+  }
+}

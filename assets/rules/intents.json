@@ -1,0 +1,103 @@
+{
+  "intents": [
+    {
+      "name": "ask_food_safety",
+      "patterns": [
+        "puis-je manger FOOD avec DISEASE",
+        "je peux manger FOOD si j'ai DISEASE",
+        "est-ce que FOOD est bon pour DISEASE",
+        "FOOD ok pour DISEASE",
+        "can i eat FOOD with DISEASE",
+        "is FOOD safe for DISEASE",
+        "should i eat FOOD if i have DISEASE"
+      ],
+      "response_template": "Pour votre condition {disease}, {food} contient {analysis}. Recommandation: {advice}."
+    },
+    {
+      "name": "ask_portion",
+      "patterns": [
+        "combien de FOOD je peux manger",
+        "quelle portion FOOD",
+        "how much FOOD can i eat",
+        "portion de FOOD par jour",
+        "safe amount of FOOD"
+      ],
+      "response_template": "Pour votre {disease}, portion recommandée de {food}: {quantity} par jour. Raison: {reason}."
+    },
+    {
+      "name": "ask_nutrient",
+      "patterns": [
+        "FOOD contient combien de NUTRIENT",
+        "NUTRIENT dans FOOD",
+        "how much NUTRIENT in FOOD",
+        "quelle quantité NUTRIENT FOOD"
+      ],
+      "response_template": "{food} contient {value}{unit} de {nutrient} pour 100g."
+    },
+    {
+      "name": "ask_recommendation",
+      "patterns": [
+        "quel aliment je dois manger pour DISEASE",
+        "DISEASE quoi manger",
+        "what should i eat for DISEASE",
+        "aliments recommandés DISEASE",
+        "aliments bons pour DISEASE"
+      ],
+      "response_template": "Pour votre {disease}, les aliments recommandés sont: {recommendations}. Ils contiennent {why}."
+    },
+    {
+      "name": "ask_warning",
+      "patterns": [
+        "FOOD c'est dangereux pour DISEASE",
+        "why avoid FOOD for DISEASE",
+        "pourquoi pas FOOD si DISEASE",
+        "FOOD mauvais pour DISEASE"
+      ],
+      "response_template": "⚠️ ATTENTION: {food} contient trop de {nutrient} ({value}). Cela peut aggraver votre {disease}."
+    }
+  ],
+  "responses": {
+    "high_nutrient": "⚠️ ATTENTION: {nutrient} très élevé ({value}{unit}) - à limiter",
+    "medium_nutrient": "⚠️ Modéré: {nutrient} ({value}{unit}) - consommer avec attention",
+    "safe": "✅ OK: {food} est sûr pour votre {disease}",
+    "recommended": "✅ RECOMMANDÉ: {food} est très bon pour votre {disease}",
+    "avoid": "❌ À ÉVITER: {food} n'est pas recommandé pour votre {disease}"
+  },
+  "entities": {
+    "food": {
+      "type": "FOOD",
+      "entity_type": "ENTITY_TYPE_GENERIC",
+      "synonyms": {
+        "apple": ["pomme", "pommes"],
+        "banana": ["banane", "bananes"],
+        "chicken": ["poulet", "poulets", "grilled chicken"],
+        "salmon": ["saumon", "saumons"],
+        "broccoli": ["brocoli", "brocolis"],
+        "bread": ["pain", "pains", "white bread", "whole wheat"],
+        "cheese": ["fromage", "fromages", "cheddar"],
+        "yogurt": ["yaourt", "yogurt"]
+      }
+    },
+    "disease": {
+      "type": "DISEASE",
+      "entity_type": "ENTITY_TYPE_GENERIC",
+      "synonyms": {
+        "diabetes": ["diabète", "diabète type 2", "diabétique"],
+        "hypertension": ["hypertension", "tension élevée", "hypertense"],
+        "obesity": ["obésité", "surpoids", "obèse"],
+        "cholesterol": ["cholestérol", "cholestérol élevé", "hypercholestérolémie"]
+      }
+    },
+    "nutrient": {
+      "type": "NUTRIENT",
+      "entity_type": "ENTITY_TYPE_GENERIC",
+      "synonyms": {
+        "sugar": ["sucre", "sucres", "glucose"],
+        "sodium": ["sodium", "sel", "salé"],
+        "fat": ["gras", "graisses", "lipides", "fat"],
+        "calories": ["calories", "energy", "énergie", "kcal"],
+        "protein": ["protéine", "protéines", "protein"]
+      }
+    }
+  }
+}
